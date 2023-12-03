@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router()
-const { authUserMiddleware } = require("../middleware/authMiddleWare");
 const dotenv = require("dotenv");
 
 dotenv.config()
