@@ -28,7 +28,7 @@ const authMiddleware = (req,res,next) =>{
 
 const authUserMiddleware = (req,res,next) =>{
   const token = req.headers.token.split(' ')[1] // Thêm dấu ? trước split 
-  const userId = req.body.userId || req.params.id
+  const userId = req?.body.userId || req.params.id
   console.log(req);
   jwt.verify(token, process.env.ACCESS_TOKEN, function(err,user){ 
     if(err){
